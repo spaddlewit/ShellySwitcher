@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="You have no devices. Tap the gear to add some!" textAlignment="center" numberOfLines="0" id="Qcx-bi-h7C"/>
+                        <table alignment="left" id="fqD-Ly-cNa">
+                            <items>
+                                <tableRow identifier="deviceRowType1" id="9V6-j5-PS9" customClass="DeviceRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="DMc-ec-DgG">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="1TR-IK-Gdg"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblName" destination="1TR-IK-Gdg" id="WT1-9o-mBX"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" alignment="left" contentMode="scaleAspectFit" id="X2P-9x-Y88">
+                            <items>
+                                <imageView width="0.5" alignment="left" image="Settings" contentMode="scaleAspectFit" id="ZtF-Me-e3a">
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="hYj-a3-avz">
+                                            <connections>
+                                                <action selector="tapSettings:" destination="AgC-eL-Hgc" id="bxz-45-ZOA"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                </imageView>
+                                <imageView width="0.5" alignment="left" image="About" contentMode="scaleAspectFit" id="NJa-0d-JvI">
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="1mT-zy-Y1B">
+                                            <connections>
+                                                <action selector="tapAbout:" destination="AgC-eL-Hgc" id="t97-dx-5KD"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                </imageView>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="imgAbout" destination="NJa-0d-JvI" id="C5A-cG-S4b"/>
+                        <outlet property="imgSettings" destination="ZtF-Me-e3a" id="8f2-h2-PRb"/>
+                        <outlet property="lblNoDevices" destination="Qcx-bi-h7C" id="p9L-V4-Q5t"/>
+                        <outlet property="tblDevices" destination="fqD-Ly-cNa" id="GdD-g8-RXF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="51" y="32"/>
+        </scene>
+        <!--icSwitchController-->
+        <scene sceneID="ZL6-pW-iqD">
+            <objects>
+                <controller identifier="icSwitchController" id="ZPo-wx-1Bm" customClass="SwitchController">
+                    <items>
+                        <button width="1" alignment="left" backgroundImage="SwitchOff" id="CKx-e7-OIK">
+                            <connections>
+                                <action selector="toggleSwitch" destination="ZPo-wx-1Bm" id="Dkf-xo-c9Q"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnSwitch" destination="CKx-e7-OIK" id="h0F-ga-jba"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="198" y="319"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="m5K-ai-ZNq">
+            <objects>
+                <controller identifier="icAboutController" title="About" id="kKC-jg-bVv">
+                    <items>
+                        <label alignment="left" text="Shelly Switcher" id="eoa-kg-uDQ" userLabel="Shelly Switcher">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="v1.0.0 by Spaddlewit Inc." numberOfLines="0" id="3No-sH-RY2">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="left" text="This app is not officially endorsed by Allterco Robotics. Use with your devices is at your own risk." numberOfLines="0" id="AAY-vW-Z8E">
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="328"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="ufv-Pb-9Rx">
+            <objects>
+                <controller identifier="icSettingsController" title="Settings" id="ck5-Fp-B0K" customClass="SettingsController">
+                    <items>
+                        <label alignment="left" text="Tap on any switch to remove it." numberOfLines="0" id="QeA-tY-o1p"/>
+                        <table alignment="left" id="rCV-hU-YNM">
+                            <items>
+                                <tableRow identifier="deviceRowType2" id="ZAW-VW-aA8" customClass="DeviceRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="2Y0-eN-yHK">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="sq8-lT-POI"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblName" destination="sq8-lT-POI" id="HLL-Ad-TRG"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Add" id="kbt-jk-mEY">
+                            <connections>
+                                <action selector="addDevice" destination="ck5-Fp-B0K" id="3TA-rY-A57"/>
+                                <segue destination="BYM-g4-rI7" kind="push" id="df3-jb-1FG"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnAdd" destination="kbt-jk-mEY" id="Zue-pf-Sop"/>
+                        <outlet property="tblDevices" destination="rCV-hU-YNM" id="PTc-ij-H00"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="361" y="32"/>
+        </scene>
+        <!--Add Device Controller-->
+        <scene sceneID="NAU-Ip-Hex">
+            <objects>
+                <controller id="BYM-g4-rI7" customClass="AddDeviceController">
+                    <items>
+                        <label alignment="left" text="IP Address" id="2eL-Qi-CPC"/>
+                        <textField width="1" alignment="left" placeholder="x.x.x.x" textContentType="cc-number" id="duM-eC-Utp">
+                            <connections>
+                                <action selector="ipAddressEntered:" destination="BYM-g4-rI7" id="VNx-cM-Rtr"/>
+                            </connections>
+                        </textField>
+                        <label alignment="left" text="Display Name" id="QB9-GK-g8A"/>
+                        <textField width="1" alignment="left" textContentType="name" id="MkP-gx-bhD">
+                            <connections>
+                                <action selector="displayNameEntered:" destination="BYM-g4-rI7" id="JwA-eR-b0Z"/>
+                            </connections>
+                        </textField>
+                        <label alignment="left" text="Device Type" id="f53-nV-K6I"/>
+                        <picker alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="nXy-7H-vkk">
+                            <connections>
+                                <action selector="deviceTypeEntered:" destination="BYM-g4-rI7" id="ueZ-7s-3tB"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Add Device" id="uMy-9M-1Tq">
+                            <connections>
+                                <action selector="addDevice" destination="BYM-g4-rI7" id="AbH-r3-X9M"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnAddDevice" destination="uMy-9M-1Tq" id="1rF-PN-HS7"/>
+                        <outlet property="pkrDeviceType" destination="nXy-7H-vkk" id="ZJe-Y9-L0d"/>
+                        <outlet property="txtDisplayName" destination="MkP-gx-bhD" id="0Zy-4L-7vs"/>
+                        <outlet property="txtIPAddress" destination="duM-eC-Utp" id="LJG-eJ-RR9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="608" y="8"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="About" width="128" height="128"/>
+        <image name="Settings" width="128" height="128"/>
+        <image name="SwitchOff" width="256" height="256"/>
+    </resources>
+</document>

@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2306D2EB257AE8FE00FDB850 /* rapidjson in Resources */ = {isa = PBXBuildFile; fileRef = 2306D2EA257AE8FE00FDB850 /* rapidjson */; };
+		2306D2F1257AE9E400FDB850 /* ShellyItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2306D2EF257AE9E400FDB850 /* ShellyItem.cpp */; };
+		2306D30E257B22CA00FDB850 /* BindableBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2306D30A257B22CA00FDB850 /* BindableBase.cpp */; };
+		2306D30F257B22CA00FDB850 /* Listable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2306D30B257B22CA00FDB850 /* Listable.cpp */; };
+		2306D315257B238D00FDB850 /* ChangedProperty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2306D314257B238D00FDB850 /* ChangedProperty.cpp */; };
+		2306D31B257B241100FDB850 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2306D319257B241100FDB850 /* Events.cpp */; };
+		2306D321257B257100FDB850 /* u_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2306D320257B257100FDB850 /* u_string.cpp */; };
+		2306D327257B2EE900FDB850 /* DataFileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2306D325257B2EE900FDB850 /* DataFileManager.mm */; };
+		2306D333257B39C600FDB850 /* AddDeviceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2306D332257B39C600FDB850 /* AddDeviceController.mm */; };
+		238879CB2575D24D00E21AF1 /* Shelly Switcher WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 238879CA2575D24D00E21AF1 /* Shelly Switcher WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		238879D12575D24D00E21AF1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238879CF2575D24D00E21AF1 /* Interface.storyboard */; };
+		238879D32575D24E00E21AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238879D22575D24E00E21AF1 /* Assets.xcassets */; };
+		238879DA2575D24E00E21AF1 /* Shelly Switcher WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 238879D92575D24E00E21AF1 /* Shelly Switcher WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		238879E02575D24E00E21AF1 /* InterfaceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 238879DF2575D24E00E21AF1 /* InterfaceController.mm */; };
+		238879E32575D24E00E21AF1 /* ExtensionDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 238879E22575D24E00E21AF1 /* ExtensionDelegate.mm */; };
+		238879E62575D24E00E21AF1 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238879E52575D24E00E21AF1 /* ComplicationController.m */; };
+		238879E82575D24F00E21AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238879E72575D24F00E21AF1 /* Assets.xcassets */; };
+		238879FC2575D68B00E21AF1 /* SettingsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 238879FB2575D68B00E21AF1 /* SettingsController.mm */; };
+		23887A022575D69C00E21AF1 /* SwitchController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23887A012575D69C00E21AF1 /* SwitchController.mm */; };
+		23887A08257732C700E21AF1 /* AboutController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23887A07257732C700E21AF1 /* AboutController.mm */; };
+		23887A0E25773EC200E21AF1 /* DeviceRowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23887A0D25773EC200E21AF1 /* DeviceRowController.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		238879CC2575D24D00E21AF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238879C02575D24D00E21AF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238879C92575D24D00E21AF1;
+			remoteInfo = "Shelly Switcher WatchKit App";
+		};
+		238879DB2575D24E00E21AF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238879C02575D24D00E21AF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238879D82575D24E00E21AF1;
+			remoteInfo = "Shelly Switcher WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		238879EF2575D24F00E21AF1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				238879DA2575D24E00E21AF1 /* Shelly Switcher WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238879F32575D24F00E21AF1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				238879CB2575D24D00E21AF1 /* Shelly Switcher WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2306D2EA257AE8FE00FDB850 /* rapidjson */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rapidjson; sourceTree = "<group>"; };
+		2306D2EF257AE9E400FDB850 /* ShellyItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShellyItem.cpp; sourceTree = "<group>"; };
+		2306D2F0257AE9E400FDB850 /* ShellyItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShellyItem.hpp; sourceTree = "<group>"; };
+		2306D30A257B22CA00FDB850 /* BindableBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BindableBase.cpp; sourceTree = "<group>"; };
+		2306D30B257B22CA00FDB850 /* Listable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Listable.cpp; sourceTree = "<group>"; };
+		2306D30C257B22CA00FDB850 /* Listable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listable.h; sourceTree = "<group>"; };
+		2306D30D257B22CA00FDB850 /* BindableBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindableBase.h; sourceTree = "<group>"; };
+		2306D313257B238C00FDB850 /* ChangedProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangedProperty.h; sourceTree = "<group>"; };
+		2306D314257B238D00FDB850 /* ChangedProperty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChangedProperty.cpp; sourceTree = "<group>"; };
+		2306D319257B241100FDB850 /* Events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
+		2306D31A257B241100FDB850 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		2306D31F257B256000FDB850 /* u_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = u_string.h; sourceTree = "<group>"; };
+		2306D320257B257100FDB850 /* u_string.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = u_string.cpp; sourceTree = "<group>"; };
+		2306D325257B2EE900FDB850 /* DataFileManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DataFileManager.mm; sourceTree = "<group>"; };
+		2306D326257B2EE900FDB850 /* DataFileManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataFileManager.hpp; sourceTree = "<group>"; };
+		2306D32E257B30C400FDB850 /* TableHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableHelper.h; sourceTree = "<group>"; };
+		2306D332257B39C600FDB850 /* AddDeviceController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AddDeviceController.mm; sourceTree = "<group>"; };
+		2306D337257B39DF00FDB850 /* AddDeviceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDeviceController.h; sourceTree = "<group>"; };
+		238879C62575D24D00E21AF1 /* Shelly Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shelly Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238879CA2575D24D00E21AF1 /* Shelly Switcher WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shelly Switcher WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238879D02575D24D00E21AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		238879D22575D24E00E21AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238879D42575D24E00E21AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238879D92575D24E00E21AF1 /* Shelly Switcher WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Shelly Switcher WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238879DE2575D24E00E21AF1 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		238879DF2575D24E00E21AF1 /* InterfaceController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = InterfaceController.mm; sourceTree = "<group>"; };
+		238879E12575D24E00E21AF1 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		238879E22575D24E00E21AF1 /* ExtensionDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExtensionDelegate.mm; sourceTree = "<group>"; };
+		238879E42575D24E00E21AF1 /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		238879E52575D24E00E21AF1 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		238879E72575D24F00E21AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238879E92575D24F00E21AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238879FA2575D68B00E21AF1 /* SettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		238879FB2575D68B00E21AF1 /* SettingsController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SettingsController.mm; sourceTree = "<group>"; };
+		23887A002575D69C00E21AF1 /* SwitchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchController.h; sourceTree = "<group>"; };
+		23887A012575D69C00E21AF1 /* SwitchController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwitchController.mm; sourceTree = "<group>"; };
+		23887A06257732C700E21AF1 /* AboutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
+		23887A07257732C700E21AF1 /* AboutController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AboutController.mm; sourceTree = "<group>"; };
+		23887A0C25773EC200E21AF1 /* DeviceRowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceRowController.h; sourceTree = "<group>"; };
+		23887A0D25773EC200E21AF1 /* DeviceRowController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DeviceRowController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		238879D62575D24E00E21AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		238879BF2575D24D00E21AF1 = {
+			isa = PBXGroup;
+			children = (
+				238879CE2575D24D00E21AF1 /* Shelly Switcher WatchKit App */,
+				238879DD2575D24E00E21AF1 /* Shelly Switcher WatchKit Extension */,
+				238879C72575D24D00E21AF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		238879C72575D24D00E21AF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				238879C62575D24D00E21AF1 /* Shelly Switcher.app */,
+				238879CA2575D24D00E21AF1 /* Shelly Switcher WatchKit App.app */,
+				238879D92575D24E00E21AF1 /* Shelly Switcher WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		238879CE2575D24D00E21AF1 /* Shelly Switcher WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				238879CF2575D24D00E21AF1 /* Interface.storyboard */,
+				238879D22575D24E00E21AF1 /* Assets.xcassets */,
+				238879D42575D24E00E21AF1 /* Info.plist */,
+			);
+			path = "Shelly Switcher WatchKit App";
+			sourceTree = "<group>";
+		};
+		238879DD2575D24E00E21AF1 /* Shelly Switcher WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2306D32E257B30C400FDB850 /* TableHelper.h */,
+				2306D319257B241100FDB850 /* Events.cpp */,
+				2306D31A257B241100FDB850 /* Events.h */,
+				2306D314257B238D00FDB850 /* ChangedProperty.cpp */,
+				2306D313257B238C00FDB850 /* ChangedProperty.h */,
+				2306D30A257B22CA00FDB850 /* BindableBase.cpp */,
+				2306D30D257B22CA00FDB850 /* BindableBase.h */,
+				2306D30B257B22CA00FDB850 /* Listable.cpp */,
+				2306D30C257B22CA00FDB850 /* Listable.h */,
+				2306D2EA257AE8FE00FDB850 /* rapidjson */,
+				238879DE2575D24E00E21AF1 /* InterfaceController.h */,
+				238879DF2575D24E00E21AF1 /* InterfaceController.mm */,
+				238879E12575D24E00E21AF1 /* ExtensionDelegate.h */,
+				238879E22575D24E00E21AF1 /* ExtensionDelegate.mm */,
+				238879E42575D24E00E21AF1 /* ComplicationController.h */,
+				238879E52575D24E00E21AF1 /* ComplicationController.m */,
+				238879E72575D24F00E21AF1 /* Assets.xcassets */,
+				238879E92575D24F00E21AF1 /* Info.plist */,
+				238879FA2575D68B00E21AF1 /* SettingsController.h */,
+				238879FB2575D68B00E21AF1 /* SettingsController.mm */,
+				23887A002575D69C00E21AF1 /* SwitchController.h */,
+				23887A012575D69C00E21AF1 /* SwitchController.mm */,
+				23887A06257732C700E21AF1 /* AboutController.h */,
+				23887A07257732C700E21AF1 /* AboutController.mm */,
+				23887A0C25773EC200E21AF1 /* DeviceRowController.h */,
+				23887A0D25773EC200E21AF1 /* DeviceRowController.mm */,
+				2306D2EF257AE9E400FDB850 /* ShellyItem.cpp */,
+				2306D2F0257AE9E400FDB850 /* ShellyItem.hpp */,
+				2306D31F257B256000FDB850 /* u_string.h */,
+				2306D320257B257100FDB850 /* u_string.cpp */,
+				2306D325257B2EE900FDB850 /* DataFileManager.mm */,
+				2306D326257B2EE900FDB850 /* DataFileManager.hpp */,
+				2306D332257B39C600FDB850 /* AddDeviceController.mm */,
+				2306D337257B39DF00FDB850 /* AddDeviceController.h */,
+			);
+			path = "Shelly Switcher WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		238879C52575D24D00E21AF1 /* Shelly Switcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238879F42575D24F00E21AF1 /* Build configuration list for PBXNativeTarget "Shelly Switcher" */;
+			buildPhases = (
+				238879C42575D24D00E21AF1 /* Resources */,
+				238879F32575D24F00E21AF1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238879CD2575D24D00E21AF1 /* PBXTargetDependency */,
+			);
+			name = "Shelly Switcher";
+			productName = "Shelly Switcher";
+			productReference = 238879C62575D24D00E21AF1 /* Shelly Switcher.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		238879C92575D24D00E21AF1 /* Shelly Switcher WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238879F02575D24F00E21AF1 /* Build configuration list for PBXNativeTarget "Shelly Switcher WatchKit App" */;
+			buildPhases = (
+				238879C82575D24D00E21AF1 /* Resources */,
+				238879EF2575D24F00E21AF1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				238879DC2575D24E00E21AF1 /* PBXTargetDependency */,
+			);
+			name = "Shelly Switcher WatchKit App";
+			productName = "Shelly Switcher WatchKit App";
+			productReference = 238879CA2575D24D00E21AF1 /* Shelly Switcher WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		238879D82575D24E00E21AF1 /* Shelly Switcher WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238879EC2575D24F00E21AF1 /* Build configuration list for PBXNativeTarget "Shelly Switcher WatchKit Extension" */;
+			buildPhases = (
+				238879D52575D24E00E21AF1 /* Sources */,
+				238879D62575D24E00E21AF1 /* Frameworks */,
+				238879D72575D24E00E21AF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shelly Switcher WatchKit Extension";
+			productName = "Shelly Switcher WatchKit Extension";
+			productReference = 238879D92575D24E00E21AF1 /* Shelly Switcher WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		238879C02575D24D00E21AF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					238879C52575D24D00E21AF1 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					238879C92575D24D00E21AF1 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					238879D82575D24E00E21AF1 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 238879C32575D24D00E21AF1 /* Build configuration list for PBXProject "Shelly Switcher" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 238879BF2575D24D00E21AF1;
+			productRefGroup = 238879C72575D24D00E21AF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				238879C52575D24D00E21AF1 /* Shelly Switcher */,
+				238879C92575D24D00E21AF1 /* Shelly Switcher WatchKit App */,
+				238879D82575D24E00E21AF1 /* Shelly Switcher WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		238879C42575D24D00E21AF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238879C82575D24D00E21AF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238879D32575D24E00E21AF1 /* Assets.xcassets in Resources */,
+				238879D12575D24D00E21AF1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238879D72575D24E00E21AF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238879E82575D24F00E21AF1 /* Assets.xcassets in Resources */,
+				2306D2EB257AE8FE00FDB850 /* rapidjson in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		238879D52575D24E00E21AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2306D31B257B241100FDB850 /* Events.cpp in Sources */,
+				2306D321257B257100FDB850 /* u_string.cpp in Sources */,
+				238879FC2575D68B00E21AF1 /* SettingsController.mm in Sources */,
+				23887A08257732C700E21AF1 /* AboutController.mm in Sources */,
+				2306D30E257B22CA00FDB850 /* BindableBase.cpp in Sources */,
+				2306D327257B2EE900FDB850 /* DataFileManager.mm in Sources */,
+				238879E62575D24E00E21AF1 /* ComplicationController.m in Sources */,
+				2306D333257B39C600FDB850 /* AddDeviceController.mm in Sources */,
+				238879E32575D24E00E21AF1 /* ExtensionDelegate.mm in Sources */,
+				2306D30F257B22CA00FDB850 /* Listable.cpp in Sources */,
+				23887A0E25773EC200E21AF1 /* DeviceRowController.mm in Sources */,
+				238879E02575D24E00E21AF1 /* InterfaceController.mm in Sources */,
+				23887A022575D69C00E21AF1 /* SwitchController.mm in Sources */,
+				2306D2F1257AE9E400FDB850 /* ShellyItem.cpp in Sources */,
+				2306D315257B238D00FDB850 /* ChangedProperty.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		238879CD2575D24D00E21AF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238879C92575D24D00E21AF1 /* Shelly Switcher WatchKit App */;
+			targetProxy = 238879CC2575D24D00E21AF1 /* PBXContainerItemProxy */;
+		};
+		238879DC2575D24E00E21AF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238879D82575D24E00E21AF1 /* Shelly Switcher WatchKit Extension */;
+			targetProxy = 238879DB2575D24E00E21AF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		238879CF2575D24D00E21AF1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238879D02575D24D00E21AF1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		238879EA2575D24F00E21AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		238879EB2575D24F00E21AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		238879ED2575D24F00E21AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 785KVVP4E8;
+				INFOPLIST_FILE = "Shelly Switcher WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spaddlewit.Shelly-Switcher.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		238879EE2575D24F00E21AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 785KVVP4E8;
+				INFOPLIST_FILE = "Shelly Switcher WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spaddlewit.Shelly-Switcher.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		238879F12575D24F00E21AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 785KVVP4E8;
+				IBSC_MODULE = Shelly_Switcher_WatchKit_Extension;
+				INFOPLIST_FILE = "Shelly Switcher WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spaddlewit.Shelly-Switcher.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		238879F22575D24F00E21AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 785KVVP4E8;
+				IBSC_MODULE = Shelly_Switcher_WatchKit_Extension;
+				INFOPLIST_FILE = "Shelly Switcher WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spaddlewit.Shelly-Switcher.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		238879F52575D24F00E21AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 785KVVP4E8;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spaddlewit.Shelly-Switcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		238879F62575D24F00E21AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 785KVVP4E8;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spaddlewit.Shelly-Switcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		238879C32575D24D00E21AF1 /* Build configuration list for PBXProject "Shelly Switcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238879EA2575D24F00E21AF1 /* Debug */,
+				238879EB2575D24F00E21AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238879EC2575D24F00E21AF1 /* Build configuration list for PBXNativeTarget "Shelly Switcher WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238879ED2575D24F00E21AF1 /* Debug */,
+				238879EE2575D24F00E21AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238879F02575D24F00E21AF1 /* Build configuration list for PBXNativeTarget "Shelly Switcher WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238879F12575D24F00E21AF1 /* Debug */,
+				238879F22575D24F00E21AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238879F42575D24F00E21AF1 /* Build configuration list for PBXNativeTarget "Shelly Switcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238879F52575D24F00E21AF1 /* Debug */,
+				238879F62575D24F00E21AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 238879C02575D24D00E21AF1 /* Project object */;
+}
