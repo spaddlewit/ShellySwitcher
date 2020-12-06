@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
@@ -88,9 +89,15 @@
                         <label alignment="left" text="v1.0.0 by Spaddlewit Inc." numberOfLines="0" id="3No-sH-RY2">
                             <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                         </label>
+                        <label alignment="left" text="https://github.com/spaddlewit/ShellySwitcher" numberOfLines="0" id="ddE-0a-erX">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                         <label alignment="left" text="This app is not officially endorsed by Allterco Robotics. Use with your devices is at your own risk." numberOfLines="0" id="AAY-vW-Z8E">
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <label alignment="left" text="Icons from The Noun Project: mikicon Chunk Icons IconPai" numberOfLines="0" id="2EW-fT-jim">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
                 </controller>
