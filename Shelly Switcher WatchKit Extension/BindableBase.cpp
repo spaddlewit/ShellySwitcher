@@ -1,13 +1,3 @@
-/*
-'Wizard2' engine by Spaddlewit Inc. ( http://www.spaddlewit.com )
-An experimental work-in-progress.
-
-This source code is NOT freeware.
-It should be distributed to authorized users only.
-
-Your use of this code is governed by your licensing agreement.
-
-*/
 #include "BindableBase.h"
 
 BindableBase::BindableBase() : Listable()
