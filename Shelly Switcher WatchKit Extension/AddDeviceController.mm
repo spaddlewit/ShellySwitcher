@@ -33,6 +33,12 @@ NSMutableArray *deviceTypeItems;
     item = [[WKPickerItem alloc] init];
     item.title = @"Shelly 1PM";
     [deviceTypeItems addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Shelly 2.5 Sw1";
+    [deviceTypeItems addObject: item];
+    item = [[WKPickerItem alloc] init];
+    item.title = @"Shelly 2.5 Sw2";
+    [deviceTypeItems addObject: item];
     
     [self.pkrDeviceType setItems:deviceTypeItems];
 }
@@ -48,11 +54,15 @@ NSMutableArray *deviceTypeItems;
 }
 
 NSString *ipAddress;
+int port;
 NSString *displayName;
 NSInteger deviceTypeIndex = 0;
 
 - (IBAction)ipAddressEntered:(NSString *)value {
     ipAddress = value;
+}
+- (IBAction)portEntered:(NSString *)value {
+    port = [value intValue];
 }
 - (IBAction)displayNameEntered:(NSString *)value {
     displayName = value;
@@ -76,6 +86,7 @@ NSInteger deviceTypeIndex = 0;
         
     ShellyItem *item = new ShellyItem();
     item->SetAddress([ipAddress UTF8String]);
+    item->SetPort(port);
     item->SetName([displayName UTF8String]);
     
     WKPickerItem *deviceType = [deviceTypeItems objectAtIndex:deviceTypeIndex];

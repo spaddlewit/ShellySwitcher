@@ -54,7 +54,7 @@
     // Call the handler with the current timeline entry
     if (complication.family == CLKComplicationFamilyModularSmall)
     {
-        UIImage *iconImage = [UIImage imageNamed:@"SwitchOn"];
+        UIImage *iconImage = [UIImage imageNamed:@"Modular"];
         CLKComplicationTemplateModularSmallSimpleImage *clkSI = [[CLKComplicationTemplateModularSmallSimpleImage alloc] initWithImageProvider:[[CLKImageProvider alloc] initWithOnePieceImage:iconImage]];
 
         CLKComplicationTimelineEntry *entry = [CLKComplicationTimelineEntry entryWithDate:[NSDate date] complicationTemplate:clkSI];
@@ -62,7 +62,7 @@
     }
     else if (complication.family == CLKComplicationFamilyGraphicCircular)
     {
-        UIImage *iconImage = [UIImage imageNamed:@"SwitchOn"];
+        UIImage *iconImage = [UIImage imageNamed:@"Graphic Circular"];
         CLKComplicationTemplateGraphicCircularImage *clkSI = [[CLKComplicationTemplateGraphicCircularImage alloc] initWithImageProvider:[[CLKFullColorImageProvider alloc] initWithFullColorImage: iconImage]];
                                                               
         CLKComplicationTimelineEntry *entry = [CLKComplicationTimelineEntry entryWithDate:[NSDate date] complicationTemplate:clkSI];
@@ -84,13 +84,13 @@
     
     if (complication.family == CLKComplicationFamilyModularSmall)
     {
-        UIImage *iconImage = [UIImage imageNamed:@"SwitchOn"];
+        UIImage *iconImage = [UIImage imageNamed:@"Modular"];
         CLKComplicationTemplateModularSmallSimpleImage *clkSI = [[CLKComplicationTemplateModularSmallSimpleImage alloc] initWithImageProvider:[[CLKImageProvider alloc] initWithOnePieceImage:iconImage]];
         handler(clkSI);
     }
     else if (complication.family == CLKComplicationFamilyGraphicCircular)
     {
-        UIImage *iconImage = [UIImage imageNamed:@"SwitchOn"];
+        UIImage *iconImage = [UIImage imageNamed:@"Graphic Circular"];
         CLKComplicationTemplateGraphicCircularImage *clkSI = [[CLKComplicationTemplateGraphicCircularImage alloc] initWithImageProvider:[[CLKFullColorImageProvider alloc] initWithFullColorImage: iconImage]];
         handler(clkSI);
     }

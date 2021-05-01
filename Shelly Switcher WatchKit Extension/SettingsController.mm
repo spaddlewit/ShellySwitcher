@@ -76,6 +76,7 @@
             //something after clicking OK
             Listable::Remove(item, (Listable**)&shellyList);
             currentShelly = NULL;
+            SaveSettings();
             [self refreshList];
                        }
      ],

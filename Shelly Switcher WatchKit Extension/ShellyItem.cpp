@@ -15,6 +15,7 @@
  */
 
 #include "ShellyItem.hpp"
+#include "u_string.h"
 
 const char *ShellyItem::GetAddress() const
 {
@@ -24,6 +25,16 @@ const char *ShellyItem::GetAddress() const
 void ShellyItem::SetAddress(const char *value)
 {
     CHANGEDPROPERTYSTRING(_address, value, "Address");
+}
+
+int ShellyItem::GetPort() const
+{
+    return _port;
+}
+
+void ShellyItem::SetPort(int value)
+{
+    CHANGEDPROPERTY(_port, value, "Port");
 }
 
 const char *ShellyItem::GetName() const
@@ -66,6 +77,12 @@ char *ShellyItem::ToString(const char *propertyName) const
 {
     if (!strcmp(propertyName, "Address"))
         return strdup(GetAddress());
+    else if (!strcmp(propertyName, "Port"))
+    {
+        char *ret = (char*)malloc(sizeof(char) * 16);
+        sprintf(ret, "%d", GetPort());
+        return ret;
+    }
     else if (!strcmp(propertyName, "Name"))
         return strdup(GetName());
     else if (!strcmp(propertyName, "Type"))
@@ -89,6 +106,8 @@ void ShellyItem::Serialize(Writer<StringBuffer>& writer) const
 
     writer.Key("Address");
     WriteString(writer, GetAddress());
+    writer.Key("Port");
+    writer.Int(GetPort());
     writer.Key("Name");
     WriteString(writer, GetName());
     writer.Key("Type");
@@ -120,6 +139,8 @@ void ShellyItem::Deserialize(const rapidjson::Value& v)
 
         if (!strcmp(name, "Address"))
             SetAddress(itr->value.GetString());
+        else if (!strcmp(name, "Port"))
+            SetPort(itr->value.GetInt());
         else if (!strcmp(name, "Name"))
             SetName(itr->value.GetString());
         else if (!strcmp(name, "Type"))

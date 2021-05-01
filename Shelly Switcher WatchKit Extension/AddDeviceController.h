@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddDeviceController : WKInterfaceController
 @property (weak, nonatomic) IBOutlet WKInterfaceTextField *txtIPAddress;
+@property (weak, nonatomic) IBOutlet
+    WKInterfaceTextField *txtPort;
 @property (weak, nonatomic) IBOutlet WKInterfaceTextField *txtDisplayName;
 @property (weak, nonatomic) IBOutlet WKInterfacePicker *pkrDeviceType;
 @property (weak, nonatomic) IBOutlet WKInterfaceButton *btnAddDevice;

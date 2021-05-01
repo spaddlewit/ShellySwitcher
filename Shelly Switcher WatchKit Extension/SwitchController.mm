@@ -106,10 +106,16 @@ using namespace rapidjson;
 
 - (IBAction)toggleSwitch {
     
-    //http://192.168.xxx.xxx/relay/0?turn=on
+    //http://192.168.xxx.xxx:80/relay/0?turn=on
     NSString *address = @"http://";
     address = [address stringByAppendingString:[NSString stringWithUTF8String:currentShelly->GetAddress()]];
-    address = [address stringByAppendingString:@"/relay/0?turn=toggle"];
+    if (currentShelly->GetPort() > 0 && currentShelly->GetPort() != 80)
+        address = [address stringByAppendingString:[NSString stringWithFormat:@":%d", currentShelly->GetPort()]];
+    
+    if (!strcmp(currentShelly->GetType(), "Shelly 2.5 Sw2"))
+        address = [address stringByAppendingString:@"/relay/1?turn=toggle"];
+    else
+        address = [address stringByAppendingString:@"/relay/0?turn=toggle"];
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:address]];
     [req setHTTPMethod:@"GET"];

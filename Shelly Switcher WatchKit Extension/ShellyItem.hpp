@@ -22,12 +22,15 @@ struct ShellyItem : BindableBase
 {
     // Start Properties
     char *_address;
+    int _port;
     char *_name;
     char *_type;
     // End Properties
 
     const char *GetAddress() const;
     void SetAddress(const char *value);
+    int GetPort() const;
+    void SetPort(int value);
     const char *GetName() const;
     void SetName(const char *value);
     const char *GetType() const;

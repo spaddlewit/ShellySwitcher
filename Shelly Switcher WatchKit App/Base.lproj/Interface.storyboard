@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
     <scenes>
@@ -150,7 +149,13 @@
                                 <action selector="ipAddressEntered:" destination="BYM-g4-rI7" id="VNx-cM-Rtr"/>
                             </connections>
                         </textField>
-                        <label alignment="left" text="Display Name" id="QB9-GK-g8A"/>
+                        <label alignment="left" text="Port (optional)" id="QB9-GK-g8A"/>
+                        <textField width="1" alignment="left" text="80" textContentType="tel" id="x9X-fn-x6U" userLabel="Txt Port">
+                            <connections>
+                                <action selector="portEntered:" destination="BYM-g4-rI7" id="gTD-yM-keP"/>
+                            </connections>
+                        </textField>
+                        <label alignment="left" text="Display Name" id="GZ3-UC-mFV"/>
                         <textField width="1" alignment="left" textContentType="name" id="MkP-gx-bhD">
                             <connections>
                                 <action selector="displayNameEntered:" destination="BYM-g4-rI7" id="JwA-eR-b0Z"/>
@@ -173,6 +178,7 @@
                         <outlet property="pkrDeviceType" destination="nXy-7H-vkk" id="ZJe-Y9-L0d"/>
                         <outlet property="txtDisplayName" destination="MkP-gx-bhD" id="0Zy-4L-7vs"/>
                         <outlet property="txtIPAddress" destination="duM-eC-Utp" id="LJG-eJ-RR9"/>
+                        <outlet property="txtPort" destination="x9X-fn-x6U" id="QEP-9p-CmA"/>
                     </connections>
                 </controller>
             </objects>
