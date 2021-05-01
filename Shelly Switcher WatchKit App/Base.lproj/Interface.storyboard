@@ -85,7 +85,7 @@
                         <label alignment="left" text="Shelly Switcher" id="eoa-kg-uDQ" userLabel="Shelly Switcher">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <label alignment="left" text="v1.0.0 by Spaddlewit Inc." numberOfLines="0" id="3No-sH-RY2">
+                        <label alignment="left" text="v1.1.0 by Spaddlewit Inc." numberOfLines="0" id="3No-sH-RY2">
                             <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                         </label>
                         <label alignment="left" text="https://github.com/spaddlewit/ShellySwitcher" numberOfLines="0" id="ddE-0a-erX">
