@@ -45,7 +45,13 @@ using namespace rapidjson;
     
     NSString *address = @"http://";
     address = [address stringByAppendingString:[NSString stringWithUTF8String:currentShelly->GetAddress()]];
-    address = [address stringByAppendingString:@"/relay/0"];
+    if (currentShelly->GetPort() > 0 && currentShelly->GetPort() != 80)
+        address = [address stringByAppendingString:[NSString stringWithFormat:@":%d", currentShelly->GetPort()]];
+    
+    if (!strcmp(currentShelly->GetType(), "Shelly 2.5 Sw2"))
+        address = [address stringByAppendingString:@"/relay/1"];
+    else
+        address = [address stringByAppendingString:@"/relay/0"];
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:address]];
     [req setHTTPMethod:@"GET"];
